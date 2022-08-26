@@ -103,7 +103,7 @@ def get_birthday(birthday, year, today):
  
  
 def get_ciba():
-    url = "http://open.iciba.com/dsapi/"
+    url = "https://v1.jinrishici.com/all.json"
     headers = {
         'Content-Type': 'application/json',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
@@ -111,7 +111,7 @@ def get_ciba():
     }
     r = get(url, headers=headers)
     note_en = r.json()["content"]
-    note_ch = r.json()["note"]
+    note_ch = r.json()["author"]
     return note_ch, note_en
  
  
